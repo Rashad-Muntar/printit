@@ -1,0 +1,12 @@
+version: '4.20.0'
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=printit
+      - POSTGRES_USER=rashad
+      - POSTGRES_PASSWORD=simmsco7

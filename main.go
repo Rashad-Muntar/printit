@@ -1,12 +1,14 @@
 package main
 
 import (
-	"github.com/rashad-muntar/printit/routes"
 	"github.com/gin-gonic/gin"
-	)
+	"github.com/rashad-muntar/printit/config"
+	"github.com/rashad-muntar/printit/routes"
+)
 
 func init() {
-
+	config.LoadInitializers()
+	config.ConnectDB()
 }
 
 func main() {
